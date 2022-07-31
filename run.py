@@ -45,7 +45,7 @@ def main():
         ipv6_addr = ''
     print(ipv6_addr)
     new6 = getip(True)
-    if new6 != ipv6_addr or True:
+    if new6 != ipv6_addr:
         print('write new addr,',new6)
         fp = open(ipf,'w')
         fp.write(new6)
