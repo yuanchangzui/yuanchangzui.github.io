@@ -27,6 +27,7 @@ def generate_str(url):
     return "'"+stt+"'"+rr
     
 def main():
+    git = '/usr/bin/git'
     h5_name = 'bsg.html'
     html = '''<!DOCTYPE html>
 <html lang="en">
@@ -55,6 +56,13 @@ def main():
         fp = open(h5_name,'w')
         fp.write(html)
         fp.close()
+
+        os.system(f'{git} add -u')
+        os.system(f'{git} commit -m "update"')
+        os.system(f'{git} push')
+        print("更新ip")
+
+
 
 
 if __name__=='__main__':
