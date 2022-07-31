@@ -66,4 +66,7 @@ def main():
 
 
 if __name__=='__main__':
-    main()
+    import time
+    for i in range(10000):
+        time.sleep(10)
+        main()
