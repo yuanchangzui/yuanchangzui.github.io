@@ -45,7 +45,7 @@ def main():
         ipv6_addr = ''
     print(ipv6_addr)
     new6 = getip(True)
-    if new6 != ipv6_addr:
+    if new6 != ipv6_addr or True:
         print('write new addr,',new6)
         fp = open(ipf,'w')
         fp.write(new6)
@@ -62,11 +62,5 @@ def main():
         os.system(f'{git} push')
         print("更新ip")
 
-
-
-
 if __name__=='__main__':
-    import time
-    for i in range(10000):
-        time.sleep(10)
-        main()
+    main()
